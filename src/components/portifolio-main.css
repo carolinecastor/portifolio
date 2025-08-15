@@ -1,0 +1,62 @@
+
+.section-portifolio {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .personagem1 > img {
+    width: 550px;
+  }
+  
+  .porti {
+    font-size: 100px;
+    font-family: 'Bagel Fat One', cursive;
+    line-height: 0.9;
+    
+  }
+  
+  .front {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .text-with-lines {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-with-lines::before,
+  .text-with-lines::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #101520;
+  }
+  
+  .text-with-lines::before {
+    left: -65px;
+  }
+  
+  .text-with-lines::after {
+    right: -65px;
+  }
+
+  .personagem1 > img:hover {
+    transform: scale(1.05);
+    transition: transform 1s ease;
+  }
+
+  .personagem1 > img:not(:hover) {
+    transform: scale(1);
+    transition: transform 1s ease;
+  }
+
+
+  

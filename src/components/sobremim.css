@@ -1,0 +1,42 @@
+.section-sobremim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section-sobremim-container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.section-sobremim-title {
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Bagel Fat One', cursive;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.section-sobremim-container p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.personagem2-img {
+    width: 650px;
+}
+
+.section-sobremim-text {
+    font-size: 16px;
+    line-height: 1.5;
+    line-height: 0.9;
+    text-align: justify;
+}
+
+
+
+
+

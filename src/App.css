@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Brawler:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #F8FFFF
+}
+
+p {
+  font-family: "Brawler", serif;
+}
+
+h1 {
+  color: #101520;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.estrelascomeco {
+  position: absolute;
+  top: clamp(-80px, -12vw, -110px);
+  left: clamp(-60px, -10vw, -90px);
+  width: clamp(300px, 50vw, 500px);
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .estrelascomeco {
+    top: clamp(-50px, -8vw, -70px);
+    left: clamp(-40px, -8vw, -60px);
+    width: clamp(200px, 40vw, 300px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.25rem;
+  }
+  
+  .estrelascomeco {
+    top: -30px;
+    left: -30px;
+    width: 150px;
+  }
+}
