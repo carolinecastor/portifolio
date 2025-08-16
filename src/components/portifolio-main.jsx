@@ -4,7 +4,7 @@ import './portifolio-main.css'
 
 export function PortifolioMain() {
   return (
-    <section className='section-portifolio' data-aos="fade-right">
+    <section id="home" className='section-portifolio' data-aos="fade-right">
       <div className='section-portifolio-container'>
         <div className='porti'>
           <h1>PORTI</h1>

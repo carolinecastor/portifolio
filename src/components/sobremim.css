@@ -36,7 +36,149 @@
     text-align: justify;
 }
 
+@media (max-width: 1200px) {
+    .section-sobremim {
+        height: 90vh;
+    }
+    
+    .section-sobremim-title {
+        font-size: 90px;
+    }
+    
+    .personagem2-img {
+        width: 580px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 15px;
+    }
+}
 
+@media (max-width: 1024px) {
+    .section-sobremim {
+        height: 85vh;
+        padding: 30px 15px;
+        gap: 40px;
+    }
+    
+    .section-sobremim-container {
+        width: 40%;
+    }
+    
+    .section-sobremim-title {
+        font-size: 80px;
+    }
+    
+    .personagem2-img {
+        width: 520px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 14px;
+    }
+}
 
+@media (max-width: 900px) {
+    .section-sobremim {
+        height: 80vh;
+        padding: 25px 12px;
+    }
+    
+    .section-sobremim-container {
+        width: 45%;
+    }
+    
+    .section-sobremim-title {
+        font-size: 75px;
+    }
+    
+    .personagem2-img {
+        width: 480px;
+    }
+}
 
+@media (max-width: 768px) {
+    .section-sobremim {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    
+    .section-sobremim-container {
+        width: 100%;
+        order: 1;
+    }
+    
+    .personagem2 {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .section-sobremim-title {
+        font-size: 70px;
+        text-align: center;
+    }
+    
+    .personagem2-img {
+        width: 450px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 15px;
+        text-align: justify;
+    }
+}
 
+@media (max-width: 640px) {
+    .section-sobremim {
+        padding: 30px 15px;
+    }
+    
+    .section-sobremim-title {
+        font-size: 60px;
+    }
+    
+    .personagem2-img {
+        width: 380px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-sobremim {
+        padding: 20px 10px;
+    }
+    
+    .section-sobremim-title {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .personagem2-img {
+        width: 320px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 360px) {
+    .section-sobremim-title {
+        font-size: 45px;
+    }
+    
+    .personagem2-img {
+        width: 280px;
+    }
+    
+    .section-sobremim-container p {
+        font-size: 12px;
+    }
+}

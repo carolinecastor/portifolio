@@ -4,7 +4,7 @@ import personagem2 from '../assets/personagem2.png'
 
 export function SobreMim() {
     return (
-        <section data-aos="fade-down" className='section-sobremim'>
+        <section id="sobre-mim" data-aos="fade-down" className='section-sobremim'>
 
             <div className='personagem2'>
                 <img className='personagem2-img' src={personagem2} alt="" />

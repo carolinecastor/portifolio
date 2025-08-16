@@ -41,28 +41,28 @@ export function Sinal() {
             method: 'POST',
             body: JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' }
-          }).then(res => res.json())
+        }).then(res => res.json())
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setIsLaunching(true)
+
         
-        // Fase 1: Preparação (0.5s)
         setLaunchPhase('ignition')
-        
+
         setTimeout(() => {
-            // Fase 2: Decolagem (1s)
+           
             setLaunchPhase('liftoff')
         }, 500)
-        
+
         setTimeout(() => {
-            // Fase 3: Voo espacial (1s)
+           
             setLaunchPhase('flight')
         }, 1500)
-        
+
         setTimeout(() => {
-            // Reset completo
+           
             sendEmail()
             setFormData({
                 nome: '',
@@ -75,7 +75,8 @@ export function Sinal() {
     }
 
     return (
-        <motion.section 
+        <motion.section
+            id="contate-me"
             className='section-sinal'
             animate={launchPhase === 'ignition' ? {
                 scale: [1, 1.002, 1],
@@ -87,8 +88,8 @@ export function Sinal() {
             <div className='stars-top-left'>
                 <img src={stars} alt="stars" />
             </div>
+
             
-            {/* Ondas de choque */}
             <AnimatePresence>
                 {launchPhase === 'liftoff' && (
                     <>
@@ -107,13 +108,16 @@ export function Sinal() {
                     </>
                 )}
             </AnimatePresence>
-            
+
             <div className='sinal-content'>
                 <div className='left-side'>
                     <div className='sinal-header'>
-                        <h1>ENVIE<br/>SEU<br/>SINAL</h1>
+                        <h1>ENVIE<br />SEU<br />SINAL</h1>
+                        <div className='satelite-container mobile-satellite'>
+                            <img src={satelite} alt="satelite" />
+                        </div>
                     </div>
-                    
+
                     <div className='form-container'>
                         <form className='contact-form' onSubmit={handleSubmit}>
                             <input
@@ -144,9 +148,9 @@ export function Sinal() {
                                 disabled={isLaunching}
                             />
                             <div className="button-container">
-                                <motion.button 
-                                    type="submit" 
-                                    className={`submit-btn ${isLaunching ? 'launching' : ''}`} 
+                                <motion.button
+                                    type="submit"
+                                    className={`submit-btn ${isLaunching ? 'launching' : ''}`}
                                     disabled={isLaunching}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
@@ -161,7 +165,7 @@ export function Sinal() {
                                     transition={{ duration: 0.3, repeat: launchPhase === 'ignition' ? 3 : 0 }}
                                 >
                                     <div className="button-content">
-                                        <motion.span 
+                                        <motion.span
                                             className="button-text"
                                             key={launchPhase}
                                             initial={{ opacity: 0, y: 10 }}
@@ -174,21 +178,21 @@ export function Sinal() {
                                             {launchPhase === 'liftoff' && 'DECOLANDO!'}
                                             {launchPhase === 'flight' && 'NO ESPAÇO!'}
                                         </motion.span>
-                                        
+
                                         <div className="rocket-container">
                                             <AnimatePresence mode="wait">
                                                 {launchPhase === 'idle' && (
                                                     <motion.div
                                                         key="rocket-idle"
                                                         initial={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
-                                                        exit={{ 
+                                                        exit={{
                                                             opacity: 0,
                                                             x: 500,
                                                             y: -600,
                                                             rotate: 50,
                                                             scale: [1, 1.5, 2, 1.8, 0.5]
                                                         }}
-                                                        transition={{ 
+                                                        transition={{
                                                             duration: 2.5,
                                                             ease: [0.25, 0.1, 0.25, 1],
                                                             times: [0, 0.2, 0.5, 0.8, 1]
@@ -200,8 +204,8 @@ export function Sinal() {
                                                 )}
                                             </AnimatePresence>
                                         </div>
-                                        
-                                        {/* Efeitos épicos */}
+
+                                       
                                         <AnimatePresence>
                                             {launchPhase === 'ignition' && (
                                                 <motion.div
@@ -230,15 +234,15 @@ export function Sinal() {
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
-                                        
+
                                         <AnimatePresence>
                                             {(launchPhase === 'liftoff' || launchPhase === 'flight') && (
                                                 <>
-                                                    {/* Rastro épico */}
+                                                    
                                                     <motion.div
                                                         className="epic-trail"
                                                         initial={{ opacity: 0, scale: 0 }}
-                                                        animate={{ 
+                                                        animate={{
                                                             opacity: [0, 1, 1, 0.5, 0],
                                                             scale: [0, 1, 1.5, 2, 0],
                                                             x: [480, 450, 400, 350, 300],
@@ -252,15 +256,15 @@ export function Sinal() {
                                                         <div className="mega-flame"></div>
                                                         <div className="plasma-trail"></div>
                                                     </motion.div>
+
                                                     
-                                                    {/* Partículas explosivas */}
                                                     <motion.div className="explosion-particles">
                                                         {[...Array(15)].map((_, i) => (
                                                             <motion.div
                                                                 key={i}
                                                                 className="explosion-particle"
-                                                                initial={{ 
-                                                                    opacity: 1, 
+                                                                initial={{
+                                                                    opacity: 1,
                                                                     scale: 0,
                                                                     x: 0,
                                                                     y: 0
@@ -279,14 +283,14 @@ export function Sinal() {
                                                             />
                                                         ))}
                                                     </motion.div>
+
                                                     
-                                                    {/* Trilha de estrelas */}
                                                     <motion.div className="star-trail">
                                                         {[...Array(6)].map((_, i) => (
                                                             <motion.div
                                                                 key={i}
                                                                 className="trail-star"
-                                                                initial={{ 
+                                                                initial={{
                                                                     opacity: 0,
                                                                     scale: 0,
                                                                     x: -20 * i,
@@ -320,17 +324,17 @@ export function Sinal() {
                     <div className='satelite-container'>
                         <img src={satelite} alt="satelite" />
                     </div>
-                    
+
                     <div className='stars-right'>
                         <img src={estrelasSinal} alt="estrelas" />
                     </div>
                 </div>
             </div>
-            
+
             <div className='canto-sinal-container'>
                 <img src={cantoSinal} alt="canto" />
             </div>
-            
+
             <div className='lua-sinal-container'>
                 <img src={luaSinal} alt="lua" />
             </div>

@@ -12,33 +12,38 @@ export function Projetos() {
     const projects = [
         {
             id: 1,
-            title: "E-commerce App",
-            description: "Plataforma completa de vendas online",
-            status: "completed"
+            title: "Portifolio",
+            description: "Portifolio pessoal",
+            status: "completed",
+            link: "https://github.com/carolinecastor/portifolio"
         },
         {
             id: 2,
-            title: "Dashboard Analytics", 
-            description: "Sistema de análise de dados",
-            status: "construction"
+            title: "Construindo...",
+            description: "Em construção",
+            status: "construction",
+            link: ''
         },
         {
             id: 3,
-            title: "Portfolio Website",
-            description: "Site pessoal responsivo",
-            status: "completed"
+            title: "Construindo...",
+            description: "Em construção",
+            status: "construction",
+            link: ''
         },
         {
             id: 4,
-            title: "Mobile App",
-            description: "Aplicativo React Native",
-            status: "construction"
+            title: "Construindo...",
+            description: "Em construção",
+            status: "construction",
+            link: ''
         },
         {
             id: 5,
-            title: "API Rest",
-            description: "Backend com Node.js",
-            status: "construction"
+            title: "Construindo...",
+            description: "Em construção",
+            status: "construction",
+            link: ''
         }
     ]
 
@@ -46,16 +51,17 @@ export function Projetos() {
 
     return (
         <section
+            id="projetos"
             className='section-projetos'
             style={{ '--bg-image': `url(${fundoProjetos})` }}>
             <h1 className='projetos-title'>Projetos</h1>
-            
+
             <div className='projects-container'>
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={30}
                     slidesPerView={2.5}
-                    pagination={{ 
+                    pagination={{
                         clickable: true,
                         bulletClass: 'swiper-pagination-bullet',
                         bulletActiveClass: 'swiper-pagination-bullet-active',
@@ -121,8 +127,8 @@ export function Projetos() {
                                         )}
                                     </div>
                                     <div className='card-footer'>
-                                        <button className={`view-project-btn ${project.status === 'construction' ? 'disabled' : ''}`}>
-                                            {project.status === 'construction' ? 'Em breve...' : 'View project'}
+                                        <button className={`view-project-btn ${project.status === 'construction' ? 'disabled' : ''}`} onClick={() => window.open(project.link, '_blank')}>
+                                            {project.status === 'construction' ? 'Em breve...' : 'Ver projeto'}
                                         </button>
                                     </div>
                                 </div>

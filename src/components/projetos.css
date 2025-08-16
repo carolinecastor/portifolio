@@ -5,7 +5,7 @@
     justify-content: center;
     padding: 50px 0px 0px 90px;
     animation: float-gentle 6s ease-in-out infinite;
-    overflow: visible;
+    overflow: hidden;
     position: relative;
 }
 
@@ -33,12 +33,17 @@
     text-align: left;
     z-index: 10;
     position: relative;
+    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 @keyframes float-gentle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -194,10 +199,13 @@
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.1);
@@ -327,16 +335,20 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
 @keyframes construction-float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
         opacity: 0.6;
     }
+
     50% {
         transform: translateY(-8px);
         opacity: 0.8;
@@ -344,15 +356,182 @@
 }
 
 @keyframes progress-subtle {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.8;
     }
+
     50% {
         opacity: 1;
     }
 }
 
+@media (max-width: 1200px) {
+    .section-projetos {
+        height: 85vh;
+        padding: 40px 0px 0px 70px;
+    }
+    
+    .projetos-title {
+        font-size: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .project-card {
+        height: 380px;
+    }
+}
 
+@media (max-width: 1024px) {
+    .section-projetos {
+        height: 80vh;
+        padding: 35px 0px 0px 50px;
+    }
+    
+    .projetos-title {
+        font-size: 65px;
+        margin-bottom: 12px;
+    }
+    
+    .project-card {
+        height: 360px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+}
 
+@media (max-width: 900px) {
+    .section-projetos {
+        height: 75vh;
+        padding: 30px 0px 0px 30px;
+    }
+    
+    .projetos-title {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .projects-container {
+        margin-top: 25px;
+    }
+    
+    .project-card {
+        height: 340px;
+    }
+}
 
+@media (max-width: 768px) {
+    .section-projetos {
+        height: auto;
+        min-height: 80vh;
+        padding: 40px 20px 0px 20px;
+    }
+    
+    .projetos-title {
+        font-size: 60px;
+        text-align: center;
+    }
+    
+    .projects-container {
+        margin-top: 30px;
+    }
+    
+    .project-card {
+        height: 350px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+}
 
+@media (max-width: 640px) {
+    .section-projetos {
+        padding: 30px 15px 0px 15px;
+    }
+    
+    .projetos-title {
+        font-size: 50px;
+    }
+    
+    .project-card {
+        height: 320px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .card-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-projetos {
+        padding: 20px 10px 0px 10px;
+    }
+    
+    .projetos-title {
+        font-size: 40px;
+    }
+    
+    .projects-container {
+        margin-top: 20px;
+    }
+    
+    .project-card {
+        height: 300px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .card-content p {
+        font-size: 13px;
+    }
+    
+    .card-footer {
+        padding: 15px;
+    }
+    
+    .view-project-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .projetos-title {
+        font-size: 35px;
+    }
+    
+    .project-card {
+        height: 280px;
+    }
+    
+    .card-content {
+        padding: 12px;
+    }
+    
+    .card-content h3 {
+        font-size: 1rem;
+    }
+    
+    .card-content p {
+        font-size: 12px;
+    }
+    
+    .card-footer {
+        padding: 12px;
+    }
+}

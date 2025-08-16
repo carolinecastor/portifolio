@@ -1,62 +1,245 @@
-
 .section-portifolio {
-    height: calc(100vh - 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .personagem1 > img {
-    width: 550px;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personagem1>img {
+  width: 550px;
+}
+
+.porti {
+  font-size: 100px;
+  font-family: 'Bagel Fat One', cursive;
+  line-height: 0.9;
+
+}
+
+.front {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-with-lines {
+  position: relative;
+  display: inline-block;
+}
+
+.text-with-lines::before,
+.text-with-lines::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #101520;
+}
+
+.text-with-lines::before {
+  left: -65px;
+}
+
+.text-with-lines::after {
+  right: -65px;
+}
+
+.personagem1>img:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
+
+.personagem1>img:not(:hover) {
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+@media (max-width: 1200px) {
+  .section-portifolio {
+    height: calc(90vh - 100px);
   }
   
   .porti {
-    font-size: 100px;
-    font-family: 'Bagel Fat One', cursive;
-    line-height: 0.9;
-    
+    font-size: 90px;
+  }
+  
+  .personagem1>img {
+    width: 500px;
   }
   
   .front {
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 20px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-portifolio {
+    height: calc(85vh - 100px);
   }
   
-  .text-with-lines {
-    position: relative;
-    display: inline-block;
+  .porti {
+    font-size: 80px;
+  }
+  
+  .personagem1>img {
+    width: 450px;
+  }
+  
+  .front {
+    font-size: 16px;
   }
   
   .text-with-lines::before,
   .text-with-lines::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 2px;
-    background-color: #101520;
+    width: 45px;
   }
   
   .text-with-lines::before {
-    left: -65px;
+    left: -55px;
   }
   
   .text-with-lines::after {
-    right: -65px;
+    right: -55px;
   }
+}
 
-  .personagem1 > img:hover {
-    transform: scale(1.05);
-    transition: transform 1s ease;
+@media (max-width: 900px) {
+  .section-portifolio {
+    height: calc(80vh - 100px);
+    gap: 20px;
+    padding: 15px;
   }
-
-  .personagem1 > img:not(:hover) {
-    transform: scale(1);
-    transition: transform 1s ease;
-  }
-
-
   
+  .porti {
+    font-size: 75px;
+  }
+  
+  .personagem1>img {
+    width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-portifolio {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  .porti {
+    font-size: 70px;
+  }
+  
+  .personagem1>img {
+    width: 400px;
+  }
+  
+  .front {
+    font-size: 16px;
+  }
+  
+  .text-with-lines::before,
+  .text-with-lines::after {
+    width: 40px;
+  }
+  
+  .text-with-lines::before {
+    left: -50px;
+  }
+  
+  .text-with-lines::after {
+    right: -50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .porti {
+    font-size: 60px;
+  }
+  
+  .personagem1>img {
+    width: 320px;
+  }
+  
+  .front {
+    font-size: 15px;
+  }
+  
+  .text-with-lines::before,
+  .text-with-lines::after {
+    width: 30px;
+  }
+  
+  .text-with-lines::before {
+    left: -40px;
+  }
+  
+  .text-with-lines::after {
+    right: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-portifolio {
+    height: auto;
+    min-height: 70vh;
+    padding: 15px;
+  }
+  
+  .porti {
+    font-size: 50px;
+  }
+  
+  .personagem1>img {
+    width: 280px;
+  }
+  
+  .front {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .text-with-lines::before,
+  .text-with-lines::after {
+    width: 25px;
+  }
+  
+  .text-with-lines::before {
+    left: -35px;
+  }
+  
+  .text-with-lines::after {
+    right: -35px;
+  }
+}
+
+@media (max-width: 360px) {
+  .porti {
+    font-size: 45px;
+  }
+  
+  .personagem1>img {
+    width: 240px;
+  }
+  
+  .front {
+    font-size: 13px;
+  }
+  
+  .text-with-lines::before,
+  .text-with-lines::after {
+    width: 20px;
+  }
+  
+  .text-with-lines::before {
+    left: -30px;
+  }
+  
+  .text-with-lines::after {
+    right: -30px;
+  }
+}

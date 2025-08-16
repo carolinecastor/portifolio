@@ -36,3 +36,23 @@
   scrollbar-width: thin;
   scrollbar-color: #101520 #F8FFFF;
 }
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid #F8FFFF;
+  }
+}
+
+@media (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid #F8FFFF;
+  }
+}
