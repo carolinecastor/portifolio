@@ -12,8 +12,8 @@ export function Projetos() {
     const projects = [
         {
             id: 1,
-            title: "Portifolio",
-            description: "Portifolio pessoal",
+            title: "Portifólio",
+            description: "Portifólio Pessoal",
             status: "completed",
             link: "https://github.com/carolinecastor/portifolio"
         },
