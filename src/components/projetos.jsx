@@ -19,10 +19,10 @@ export function Projetos() {
         },
         {
             id: 2,
-            title: "Construindo...",
-            description: "Em construção",
-            status: "construction",
-            link: ''
+            title: "Blog",
+            description: "CSS - Estudos",
+            status: "completed",
+            link: 'https://carolinecastor.github.io/estudo-css'
         },
         {
             id: 3,

@@ -10,6 +10,7 @@ import { SobreMim } from './components/sobremim'
 import { Linguagens } from './components/linguagens'
 import { Projetos } from './components/projetos'
 import { Sinal } from './components/sinal'
+import { Footer } from './components/footer'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Linguagens />
       <Projetos />
       <Sinal />
+      <Footer />
     </div>
   )
 }

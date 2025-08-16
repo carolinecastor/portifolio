@@ -1,0 +1,364 @@
+.footer-section {
+    position: relative;
+    background-color: #F8FFFF;
+    padding: clamp(40px, 8vh, 80px) clamp(20px, 5vw, 40px) clamp(20px, 4vh, 40px);
+    overflow: hidden;
+    border-top: 1px solid rgba(16, 21, 32, 0.1);
+}
+
+.footer-stars-bg {
+    position: absolute;
+    top: clamp(20px, 5vh, 40px);
+    right: clamp(20px, 5vw, 40px);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.footer-stars-bg img {
+    width: clamp(60px, 12vw, 100px);
+    height: auto;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    gap: clamp(20px, 5vw, 40px);
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-satellite {
+    position: relative;
+}
+
+.footer-satellite img {
+    width: clamp(80px, 15vw, 120px);
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(16, 21, 32, 0.1));
+}
+
+.footer-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 400px;
+}
+
+.footer-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 15px);
+    margin-bottom: clamp(8px, 2vh, 12px);
+}
+
+.footer-name h2 {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: clamp(24px, 5vw, 36px);
+    color: #101520;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.footer-rocket {
+    color: #101520;
+    font-size: clamp(20px, 4vw, 28px);
+    animation: rocket-float 2s ease-in-out infinite;
+}
+
+.footer-subtitle {
+    font-family: "Brawler", serif;
+    font-size: clamp(14px, 3vw, 18px);
+    color: #666;
+    margin: 0 0 clamp(20px, 4vh, 30px) 0;
+    font-style: italic;
+}
+
+.footer-social {
+    display: flex;
+    gap: clamp(15px, 4vw, 25px);
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 1.5vw, 10px);
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
+    background-color: #F8FFFF;
+    border: 2px solid #101520;
+    border-radius: clamp(10px, 2.5vw, 15px);
+    text-decoration: none;
+    color: #101520;
+    font-family: "Brawler", serif;
+    font-size: clamp(12px, 2.5vw, 16px);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    background-color: rgba(16, 21, 32, 0.05);
+    box-shadow: 0 4px 12px rgba(16, 21, 32, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    font-size: clamp(16px, 3.5vw, 22px);
+    transition: transform 0.3s ease;
+}
+
+.linkedin:hover {
+    border-color: #0077B5;
+    color: #0077B5;
+}
+
+.github:hover {
+    border-color: #333;
+    color: #333;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-moon {
+    position: relative;
+}
+
+.footer-moon img {
+    width: clamp(100px, 18vw, 150px);
+    height: auto;
+    animation: moon-glow 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.footer-bottom {
+    margin-top: clamp(30px, 6vh, 50px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-stars-decoration {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.footer-stars-decoration img {
+    width: clamp(200px, 40vw, 300px);
+    height: auto;
+    animation: gentle-float 6s ease-in-out infinite;
+}
+
+.footer-copyright {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(248, 255, 255, 0.9);
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+    border-radius: clamp(8px, 2vw, 12px);
+    backdrop-filter: blur(5px);
+}
+
+.footer-copyright p {
+    font-family: "Brawler", serif;
+    font-size: clamp(12px, 2.5vw, 14px);
+    color: #666;
+    margin: 0;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rocket-float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+@keyframes moon-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+        transform: scale(1.02);
+    }
+}
+
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: clamp(25px, 6vw, 35px);
+    }
+    
+    .footer-left,
+    .footer-right {
+        order: 2;
+        justify-content: center;
+    }
+    
+    .footer-center {
+        order: 1;
+    }
+    
+    .footer-social {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(12px, 3vw, 18px);
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .footer-satellite {
+        display: none;
+    }
+    
+    .footer-moon img {
+        width: clamp(80px, 15vw, 120px);
+    }
+    
+    .footer-stars-bg {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .footer-stars-bg img {
+        width: clamp(40px, 8vw, 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: clamp(30px, 6vh, 50px) clamp(15px, 4vw, 25px) clamp(15px, 3vh, 25px);
+    }
+    
+    .footer-name {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-right {
+        display: none;
+    }
+    
+    .footer-stars-decoration img {
+        width: clamp(150px, 35vw, 200px);
+    }
+}
+
+/* Otimizações para dispositivos com tela sensível ao toque */
+@media (hover: none) and (pointer: coarse) {
+    .social-link:hover {
+        transform: none;
+        background-color: #F8FFFF;
+        box-shadow: none;
+    }
+    
+    .social-link:active {
+        transform: scale(0.98);
+        background-color: rgba(16, 21, 32, 0.05);
+    }
+}
+
+/* Reduz animações em dispositivos com preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .footer-satellite img,
+    .footer-moon img,
+    .footer-stars-bg img,
+    .footer-stars-decoration img,
+    .footer-rocket {
+        animation: none;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Otimização para telas ultra-wide */
+@media (min-width: 1400px) {
+    .footer-content {
+        max-width: 1400px;
+        gap: 60px;
+    }
+    
+    .footer-satellite img {
+        width: 140px;
+    }
+    
+    .footer-moon img {
+        width: 180px;
+    }
+}
