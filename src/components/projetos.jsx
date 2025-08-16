@@ -1,5 +1,5 @@
 import './projetos.css'
-import fundoProjetos from '../assets/fundoProjetos.png'
+import fundoProjetos from '../assets/fundoprojetos.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
