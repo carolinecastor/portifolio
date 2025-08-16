@@ -1,36 +1,16 @@
 import './footer.css'
-import satelite from '../assets/satelite.png'
-import stars from '../assets/stars.png'
 import estrelasSinal from '../assets/estrelas.sinal.png'
-import luaSinal from '../assets/lua.sinal.png'
 import { FaLinkedin, FaGithub, FaRocket } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 export function Footer() {
     return (
         <footer className="footer-section">
-            <div className='footer-stars-bg'>
-                <img src={stars} alt="stars" />
+            <div className='footer-stars-top'>
+                <img src={estrelasSinal} alt="estrelas" />
             </div>
             
             <div className='footer-content'>
-                <div className='footer-left'>
-                    <motion.div 
-                        className='footer-satellite'
-                        animate={{ 
-                            y: [0, -10, 0],
-                            rotate: [0, 5, 0]
-                        }}
-                        transition={{ 
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }}
-                    >
-                        <img src={satelite} alt="satelite" />
-                    </motion.div>
-                </div>
-
                 <div className='footer-center'>
                     <motion.div 
                         className='footer-info'
@@ -50,7 +30,7 @@ export function Footer() {
                         
                         <div className='footer-social'>
                             <motion.a 
-                                href="https://linkedin.com/in/caroline-castro" 
+                                href="https://www.linkedin.com/in/caroline-castro-636931376/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className='social-link linkedin'
@@ -75,18 +55,9 @@ export function Footer() {
                         </div>
                     </motion.div>
                 </div>
-
-                <div className='footer-right'>
-                    <div className='footer-moon'>
-                        <img src={luaSinal} alt="lua" />
-                    </div>
-                </div>
             </div>
 
             <div className='footer-bottom'>
-                <div className='footer-stars-decoration'>
-                    <img src={estrelasSinal} alt="estrelas" />
-                </div>
                 
                 <motion.div 
                     className='footer-copyright'
@@ -95,7 +66,7 @@ export function Footer() {
                     transition={{ duration: 1, delay: 0.5 }}
                     viewport={{ once: true }}
                 >
-                    <p>&copy; 2024 Caroline Castro - Feito com ❤️ e muito ☕</p>
+                    <p>&copy; 2025 Caroline Castro - Feito com ❤️ e muito ☕</p>
                 </motion.div>
             </div>
         </footer>

@@ -6,54 +6,40 @@
     border-top: 1px solid rgba(16, 21, 32, 0.1);
 }
 
-.footer-stars-bg {
+.footer-stars-top {
     position: absolute;
-    top: clamp(20px, 5vh, 40px);
-    right: clamp(20px, 5vw, 40px);
+    top: clamp(10px, 3vh, 20px);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-.footer-stars-bg img {
-    width: clamp(60px, 12vw, 100px);
+.footer-stars-top img {
+    position: absolute;
+    left: -350px;
+    width: clamp(200px, 40vw, 350px);
     height: auto;
-    animation: twinkle 3s ease-in-out infinite;
+    animation: gentle-float 6s ease-in-out infinite;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    gap: clamp(20px, 5vw, 40px);
-}
-
-.footer-left {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.footer-satellite {
-    position: relative;
-}
-
-.footer-satellite img {
-    width: clamp(80px, 15vw, 120px);
-    height: auto;
-    filter: drop-shadow(0 4px 8px rgba(16, 21, 32, 0.1));
+    padding-top: clamp(30px, 6vh, 50px);
 }
 
 .footer-center {
-    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .footer-info {
@@ -151,23 +137,7 @@
     color: #333;
 }
 
-.footer-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-.footer-moon {
-    position: relative;
-}
-
-.footer-moon img {
-    width: clamp(100px, 18vw, 150px);
-    height: auto;
-    animation: moon-glow 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-}
 
 .footer-bottom {
     margin-top: clamp(30px, 6vh, 50px);
@@ -175,21 +145,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.footer-stars-decoration {
-    position: absolute;
-    left: 50%;
-    top: -20px;
-    transform: translateX(-50%);
-    z-index: 1;
-    opacity: 0.4;
-}
-
-.footer-stars-decoration img {
-    width: clamp(200px, 40vw, 300px);
-    height: auto;
-    animation: gentle-float 6s ease-in-out infinite;
 }
 
 .footer-copyright {
@@ -209,16 +164,7 @@
     margin: 0;
 }
 
-@keyframes twinkle {
-    0%, 100% {
-        opacity: 0.6;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-}
+
 
 @keyframes rocket-float {
     0%, 100% {
@@ -229,16 +175,7 @@
     }
 }
 
-@keyframes moon-glow {
-    0%, 100% {
-        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-        transform: scale(1);
-    }
-    50% {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
-        transform: scale(1.02);
-    }
-}
+
 
 @keyframes gentle-float {
     0%, 100% {
@@ -252,19 +189,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: clamp(25px, 6vw, 35px);
-    }
-    
-    .footer-left,
-    .footer-right {
-        order: 2;
-        justify-content: center;
-    }
-    
-    .footer-center {
-        order: 1;
+        padding-top: clamp(20px, 4vh, 30px);
     }
     
     .footer-social {
@@ -279,21 +204,8 @@
         justify-content: center;
     }
     
-    .footer-satellite {
-        display: none;
-    }
-    
-    .footer-moon img {
-        width: clamp(80px, 15vw, 120px);
-    }
-    
-    .footer-stars-bg {
-        top: 10px;
-        right: 10px;
-    }
-    
-    .footer-stars-bg img {
-        width: clamp(40px, 8vw, 60px);
+    .footer-stars-top img {
+        width: clamp(150px, 35vw, 250px);
     }
 }
 
@@ -307,12 +219,8 @@
         gap: 8px;
     }
     
-    .footer-right {
-        display: none;
-    }
-    
-    .footer-stars-decoration img {
-        width: clamp(150px, 35vw, 200px);
+    .footer-stars-top img {
+        width: clamp(120px, 30vw, 180px);
     }
 }
 
@@ -332,10 +240,7 @@
 
 /* Reduz animações em dispositivos com preferência por movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
-    .footer-satellite img,
-    .footer-moon img,
-    .footer-stars-bg img,
-    .footer-stars-decoration img,
+    .footer-stars-top img,
     .footer-rocket {
         animation: none;
     }
@@ -351,14 +256,9 @@
 @media (min-width: 1400px) {
     .footer-content {
         max-width: 1400px;
-        gap: 60px;
     }
     
-    .footer-satellite img {
-        width: 140px;
-    }
-    
-    .footer-moon img {
-        width: 180px;
+    .footer-stars-top img {
+        width: clamp(300px, 35vw, 400px);
     }
 }
