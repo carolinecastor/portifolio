@@ -30,7 +30,7 @@ export function Footer() {
                         
                         <div className='footer-social'>
                             <motion.a 
-                                href="https://www.linkedin.com/in/caroline-castro-636931376/" 
+                                href="https://www.linkedin.com/in/caroline-santos-castro/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className='social-link linkedin'
