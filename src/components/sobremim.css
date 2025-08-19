@@ -37,9 +37,15 @@
     text-align: justify;
 }
 
+@media (max-width: 1366px) {
+    .section-sobremim {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 1200px) {
     .section-sobremim {
-        height: 90vh;
+        height: 100vh;
     }
     
     .section-sobremim-title {
@@ -57,7 +63,7 @@
 
 @media (max-width: 1024px) {
     .section-sobremim {
-        height: 85vh;
+        height: 100vh;
         padding: 30px 15px;
         gap: 40px;
     }
@@ -81,7 +87,7 @@
 
 @media (max-width: 900px) {
     .section-sobremim {
-        height: 80vh;
+        height: 100vh;
         padding: 25px 12px;
     }
     

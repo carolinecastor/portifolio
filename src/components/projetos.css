@@ -1,5 +1,5 @@
 .section-projetos {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -367,9 +367,16 @@
     }
 }
 
+@media (max-width: 1366px) {
+    .section-projetos {
+        height: 100vh;
+        padding: 45px 0px 0px 80px;
+    }
+}
+
 @media (max-width: 1200px) {
     .section-projetos {
-        height: 85vh;
+        height: 100vh;
         padding: 40px 0px 0px 70px;
     }
     
@@ -385,7 +392,7 @@
 
 @media (max-width: 1024px) {
     .section-projetos {
-        height: 80vh;
+        height: 100vh;
         padding: 35px 0px 0px 50px;
     }
     
@@ -405,7 +412,7 @@
 
 @media (max-width: 900px) {
     .section-projetos {
-        height: 75vh;
+        height: 100vh;
         padding: 30px 0px 0px 30px;
     }
     
@@ -425,8 +432,7 @@
 
 @media (max-width: 768px) {
     .section-projetos {
-        height: auto;
-        min-height: 80vh;
+        height: 100vh;
         padding: 40px 20px 0px 20px;
     }
     
